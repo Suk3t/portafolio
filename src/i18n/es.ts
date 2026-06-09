@@ -1,6 +1,8 @@
 export default {
-  home: "Inicio",
-  about: "Sobre mí",
-  projects: "Proyectos",
-  contact: "Contacto",
+  nav: {
+    home: "Inicio",
+    about: "Sobre mi",
+    projects: "Proyectos",
+    contact: "Contacto",
+  },
 };
