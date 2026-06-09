@@ -1,5 +1,6 @@
 ---
 import MoonIcon from "../assets/moon.svg";
+
 const { lang, t } = Astro.props;
 const alternateLang = lang === "es" ? "en" : "es";
 ---
@@ -8,7 +9,7 @@ const alternateLang = lang === "es" ? "en" : "es";
     <ul class="nav-links">
         <li><a href="#about">{t.nav.about}</a></li>
         <li><a href="#projects">{t.nav.projects}</a></li>
-        <li><a href="#contact">{t.nav.contact}</a></li>
+        <li><a href="#formation">{t.nav.formation}</a></li>
     </ul>
 
     <div class="actions">

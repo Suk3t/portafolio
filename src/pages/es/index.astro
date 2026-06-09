@@ -1,18 +1,17 @@
 ---
 import MainLayout from "../../layouts/Mainlayout.astro";
-import Navbar from "../../components/Navbar.astro";
-import es from "../../i18n/es";
-import Footer from "../../components/Footer.astro";
 ---
 
-<MainLayout>
-    <Navbar lang="es" t={es} />
+<MainLayout lang="es">
+    <section id="about">
+        <h1>Sobre mí</h1>
+    </section>
 
-    <section id="about">Sobre mi</section>
+    <section id="projects">
+        <h1>Proyectos</h1>
+    </section>
 
-    <section id="projects">Proyectos</section>
-
-    <section id="contact">Contacto</section>
-
-    <Footer />
+    <section id="formation">
+        <h1>Formación academica</h1>
+    </section>
 </MainLayout>

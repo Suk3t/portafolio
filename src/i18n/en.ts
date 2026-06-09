@@ -3,6 +3,7 @@ export default {
     home: "Home",
     about: "About me",
     projects: "Projects",
+    formation: "Academic background",
     contact: "Contact",
   },
 };

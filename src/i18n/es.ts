@@ -3,6 +3,7 @@ export default {
     home: "Inicio",
     about: "Sobre mi",
     projects: "Proyectos",
+    formation: "Formación academica",
     contact: "Contacto",
   },
 };
