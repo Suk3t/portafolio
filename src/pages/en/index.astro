@@ -1,0 +1,15 @@
+---
+import MainLayout from "../../layouts/Mainlayout.astro";
+import Navbar from "../../components/Navbar.astro";
+import en from "../../i18n/en";
+---
+
+<MainLayout>
+    <Navbar lang="en" t={en} />
+
+    <section id="about">About</section>
+
+    <section id="projects">Projects</section>
+
+    <section id="contact">Contact</section>
+</MainLayout>

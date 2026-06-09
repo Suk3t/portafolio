@@ -1,0 +1,6 @@
+export default {
+  home: "Home",
+  about: "About me",
+  projects: "Projects",
+  contact: "Contact",
+};

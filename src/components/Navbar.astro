@@ -1,0 +1,28 @@
+---
+import MoonIcon from "../assets/moon.svg";
+import SunIcon from "../assets/sun.svg";
+const { lang, t } = Astro.props;
+const alternateLang = lang === "es" ? "en" : "es";
+---
+
+<nav class="navbar">
+    <ul class="nav-links">
+        <li><a href="#about">Sobre mí</a></li>
+        <li><a href="#projects">Proyectos</a></li>
+        <li><a href="#contact">Contacto</a></li>
+    </ul>
+
+    <div class="actions">
+        <a href={`/${alternateLang}`}>
+            {alternateLang.toLocaleUpperCase()}
+        </a>
+
+        <button id="theme-toggle">
+            <img id="theme-icon" src={MoonIcon.src} alt="Modo oscuro" />
+        </button>
+    </div>
+</nav>
+
+<script>
+    import "../scripts/theme.ts";
+</script>
