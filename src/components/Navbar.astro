@@ -1,14 +1,33 @@
 ---
 import MoonIcon from "../assets/moon.svg";
+import CompanyIcon from "../assets/company.svg";
 
 const { lang, t } = Astro.props;
 const alternateLang = lang === "es" ? "en" : "es";
 ---
 
 <nav class="navbar">
+    <div class="brand-controls">
+        <a class="company-logo" href={lang === "es" ? "/" : `/${lang}`} aria-label={t.nav.home}>
+            <img src={CompanyIcon.src} alt="" />
+        </a>
+
+        <a
+            class="experience-switch is-on"
+            href="/visual-novel"
+            role="switch"
+            aria-checked="true"
+            aria-label={t.nav.visualNovel}
+            title={t.nav.visualNovel}
+        >
+            <span></span>
+        </a>
+    </div>
+
     <ul class="nav-links">
         <li><a href="#about">{t.nav.about}</a></li>
         <li><a href="#projects">{t.nav.projects}</a></li>
+        <li><a href="#experience">{t.nav.experience}</a></li>
         <li><a href="#formation">{t.nav.formation}</a></li>
     </ul>
 

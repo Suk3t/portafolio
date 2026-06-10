@@ -1,17 +1,9 @@
 ---
 import MainLayout from "../../layouts/Mainlayout.astro";
+import PortfolioContent from "../../components/PortfolioContent.astro";
+import en from "../../i18n/en";
 ---
 
 <MainLayout lang="en">
-    <section id="about">
-        <h1>About me</h1>
-    </section>
-
-    <section id="projects">
-        <h1>Projects</h1>
-    </section>
-
-    <section id="formation">
-        <h1>Academic background</h1>
-    </section>
+    <PortfolioContent lang="en" t={en} />
 </MainLayout>

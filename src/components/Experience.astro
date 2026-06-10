@@ -1,0 +1,37 @@
+---
+import { experience } from "../data/experience";
+
+const { lang = "es", t } = Astro.props;
+const items = experience[lang as "es" | "en"];
+---
+
+<section id="experience" class="experience-section">
+    <div class="section-heading">
+        <div>
+            <span class="eyebrow">{t.experience.eyebrow}</span>
+            <h2>{t.experience.title}</h2>
+            <p>{t.experience.intro}</p>
+        </div>
+    </div>
+
+    <ol class="experience-list">
+        {items.map((item) => (
+            <li class="experience-item">
+                <div class="experience-marker" aria-hidden="true"></div>
+                <article class="experience-card">
+                    <div class="experience-meta">
+                        <div>
+                            <h3>{item.role}</h3>
+                            <p class="company">{item.company}</p>
+                        </div>
+                        <span class="period">{item.period}</span>
+                    </div>
+                    <p>{item.description}</p>
+                    <ul class="tag-list" aria-label={t.projects.technologies}>
+                        {item.technologies.map((technology) => <li>{technology}</li>)}
+                    </ul>
+                </article>
+            </li>
+        ))}
+    </ol>
+</section>

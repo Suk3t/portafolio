@@ -1,0 +1,17 @@
+---
+import Experience from "./Experience.astro";
+import Projects from "./Projects.astro";
+
+const { lang = "es", t } = Astro.props;
+---
+
+<section id="about">
+    <h1>{t.content.about}</h1>
+</section>
+
+<Projects lang={lang} t={t} />
+<Experience lang={lang} t={t} />
+
+<section id="formation">
+    <h2>{t.content.formation}</h2>
+</section>
